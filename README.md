@@ -1,2 +1,0 @@
-# coupson
-Coupon App repository.
