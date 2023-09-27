@@ -10,7 +10,11 @@ const App = () => {
         alignItems: 'center',
         backgroundColor:"orange"
       }}>
-      <Text>Buy my coupon! and so on.</Text>
+      <Text
+      style={{
+        color:'white'
+      }}
+      >Buy my coupon! and so on.</Text>
     </View>
   );
 };
