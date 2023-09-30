@@ -14,7 +14,7 @@ const App = () => {
       style={{
         color:'white'
       }}
-      >Buy my coupon! and so on.</Text>
+      >Buy my coupon! and so on. Will give back</Text>
     </View>
   );
 };
