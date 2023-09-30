@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 
 const App = () => {
   return (
+    
     <View
       style={{
         flex: 1,
@@ -14,7 +15,7 @@ const App = () => {
       style={{
         color:'white'
       }}
-      >Buy my coupon! and so on. Will give back</Text>
+      >Buy my coupon! and so, with Redux update</Text>
     </View>
   );
 };
