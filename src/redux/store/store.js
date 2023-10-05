@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import defaultSlice from '../features/defaultSlice';
+import defaultSlice from '../slice/defaultSlice';
 
 
 export const store = configureStore({

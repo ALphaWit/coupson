@@ -2,23 +2,23 @@ import { StyleSheet, Text, View, Button } from 'react-native'
 import {NativeStackScreenProps} from '@react-navigation/native-stack'
 import React from 'react'
 
-const Home = ({navigation}) => {
+const Profile = ({navigation}) => {
   return (
     <View
     style={{
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor:"orange"
+      backgroundColor:"red"
     }}>
     <Text
     style={{
       color:'white'
     }}
-    >Buy my coupon! and so, with Redux update za</Text>
+    >Profile Screen</Text>
     <Button
       onPress={() => {
-        navigation.navigate("Profile",{data:"data from props"})
+        navigation.navigate("Default",{data:"data from props"})
         console.log('You tapped the button!');
       }}
       title="Press Me"
@@ -28,6 +28,6 @@ const Home = ({navigation}) => {
   )
 }
 
-export default Home
+export default Profile
 
 const styles = StyleSheet.create({})

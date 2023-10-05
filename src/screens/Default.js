@@ -24,10 +24,10 @@ const Default = ({route, navigation}) => {
         onPress={() => {
           console.log('You tapped the button!');
           console.log(route.params)
-          // navigation.navigate("Home")
+          navigation.navigate("Home")
           // navigation.goBack()
           // navigation.pop(2)
-          navigation.popToTop() //ALL VALUES FROM STACK WILL BE CLEARED AMD YOU WILL BE POPPED TO THE TOP
+          // navigation.popToTop() //ALL VALUES FROM STACK WILL BE CLEARED AND YOU WILL BE POPPED TO THE TOP
         }}
         title="Press Me"
       />
