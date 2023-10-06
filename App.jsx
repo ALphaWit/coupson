@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/screens/Home'
 import Default from './src/screens/Default'
 import Profile from './src/screens/Profile'
+import { ScreenStackHeaderSubview } from 'react-native-screens';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -17,9 +18,9 @@ const HomeStack = createNativeStackNavigator();
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={Home}/>
-      <HomeStack.Screen name="Default" component={Default} />
-      <HomeStack.Screen name="Profile" component={Profile} />
+      <HomeStack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+      <HomeStack.Screen name="Default" component={Default} options={{ headerShown: false }}/>
+      <HomeStack.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
     </HomeStack.Navigator>
   );
 }
@@ -40,8 +41,8 @@ const BotTab = createBottomTabNavigator();
 function BotTabStack(){
   return(
     <BotTab.Navigator>
-      <BotTab.Screen name="HomeStack" component={HomeStackScreen} />
-      <BotTab.Screen name="Profile" component={Profile} />
+      <BotTab.Screen name="HomeStack" component={HomeStackScreen} options={{ headerShown: false }} />
+      <BotTab.Screen name="Profile" component={Profile} options={{ headerShown: false }}/>
   </BotTab.Navigator>
   );
 }
