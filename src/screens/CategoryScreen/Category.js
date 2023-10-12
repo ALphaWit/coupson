@@ -1,30 +1,30 @@
 import React from 'react';
 import {Text, View, Button} from 'react-native';
-import { useNavigation } from '@react-navigation/native'
-import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
-const Default = ({route, navigation}) => {
-  const {data} = route.params 
+const Category = ({route, navigation}) => {
+  // const {data} = route.params
   // const navigation = useNavigation()
   return (
-    
     <View
       style={{
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor:"black"
+        backgroundColor: 'black',
       }}>
       <Text
-      style={{
-        color:'white'
-      }}
-      >{data}</Text>
+        style={{
+          color: 'white',
+        }}>
+        {'Category'}
+      </Text>
       <Button
         onPress={() => {
           console.log('You tapped the button!');
-          console.log(route.params)
-          navigation.navigate("Home")
+          console.log(route.params);
+          navigation.navigate('HomeScreen');
           // navigation.goBack()
           // navigation.pop(2)
           // navigation.popToTop() //ALL VALUES FROM STACK WILL BE CLEARED AND YOU WILL BE POPPED TO THE TOP
@@ -34,4 +34,4 @@ const Default = ({route, navigation}) => {
     </View>
   );
 };
-export default Default;
+export default Category;
