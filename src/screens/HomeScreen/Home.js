@@ -1,25 +1,20 @@
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'orange',
-      }}>
+      style={styles.container}>
       <Text
         style={{
-          color: 'white',
+          color: 'black',
         }}>
-        HOME -----> Buy my coupon! and so, with Redux update za
+        HOME ----- Buy my coupon! and so, with Redux update za
       </Text>
       <Button
         onPress={() => {
-          navigation.navigate('AccountScreen', {data: 'data from props'});
+          navigation.navigate('AccountScreen');
           console.log('You tapped the button!');
         }}
         title="Press Me"
@@ -30,4 +25,10 @@ const Home = ({navigation}) => {
 
 export default Home;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container:{
+    marginTop:30,
+    backgroundColor:"orange",
+    height:400
+  }
+});

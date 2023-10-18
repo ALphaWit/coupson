@@ -19,7 +19,7 @@ const Profile = ({navigation}) => {
       </Text>
       <Button
         onPress={() => {
-          navigation.navigate('CategoryScreen', {data: 'data from props'});
+          navigation.navigate('CategoryScreen');
           console.log('You tapped the button!');
         }}
         title="Press Me"
