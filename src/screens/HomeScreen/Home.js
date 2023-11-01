@@ -1,25 +1,27 @@
-import {StyleSheet, Text, View, Button, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Button, TouchableOpacity, ScrollView} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import TopSearchComponent from './Components/TopSearchComponent/TopSearchComponent'
+import OffersList from './Components/OffersList/OffersList'
+import HomeShopList from './Components/HomeShopList/HomeShopList';
 import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Home = ({ navigation }) => {
   return (
+    
     <View
       style={styles.container}>
-      <Text
-        style={{
-          color: 'black',
-        }}>
-        HOME ----- Buy my coupon! and so, with Redux update za
-      </Text>
-      <Button
-        onPress={() => {
-          navigation.navigate('AccountScreen');
-          console.log('You tapped the button!');
-        }}
-        title="Press Me"
-      />
+        <TopSearchComponent/>
+        <OffersList/>
+        <ScrollView>
+        <HomeShopList/>
+        </ScrollView>
+        
+
+       
+        
     </View>
+   
   );
 };
 
@@ -27,8 +29,21 @@ export default Home;
 
 const styles = StyleSheet.create({
   container:{
-    marginTop:30,
-    backgroundColor:"orange",
-    height:400
+    backgroundColor:"white",
+    flex:1,
+  },
+  upperFront:{
+    marginTop:"60%",
+    backgroundColor:"black",
+    height:'30%',
+  },
+  LowerFront:{
+    marginTop:"40%",
+    backgroundColor:"black",
+    height:'60%',
+  },
+  backText:{
+    fontFamily:'SFPRODISPLAYBOLD',
+    color: 'white',
   }
 });
